@@ -1,17 +1,17 @@
 // sync function vs async function
-const speeder = require('speeder');
+const speeder = require("speeder");
 
 async function asyncReturn() {
-  return 'returned!';
+  return "returned!";
 }
 
 function syncReturn() {
-  return 'returned!';
+  return "returned!";
 }
 
 async function compareFunctions() {
   const results = await speeder([syncReturn, asyncReturn], {
-    names: ['Sync Simple Return', 'Async Simple Return'],
+    names: ["Sync Simple Return", "Async Simple Return"],
   });
 
   console.log(results);

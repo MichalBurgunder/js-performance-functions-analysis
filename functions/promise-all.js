@@ -1,5 +1,5 @@
 // Promise.all vs serial awaits
-const speeder = require('speeder');
+const speeder = require("speeder");
 
 async function someFunction() {
   return 0;
@@ -14,8 +14,8 @@ async function promiseAllAwait() {
 }
 
 async function compareFunctions() {
-  const results = await speeder([someFunction, serialAwait, promiseAllAwait], {
-    names: ['async return', 'serial async return', 'parallel asyncreturn'],
+  const results = await speeder([serialAwait, promiseAllAwait], {
+    names: ["serial async return", "parallel async return"],
   });
 
   console.log(results);
