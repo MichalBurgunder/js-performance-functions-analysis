@@ -21,7 +21,11 @@ async function compareFunctions() {
   const results = await speeder(
     [syncFuncReturn, asyncFuncReturnAwait, asyncFuncAwait],
     {
-      names: ["async throw", "async return await throw", "async await throw"],
+      names: [
+        "async return throw",
+        "async return await throw",
+        "async await throw",
+      ],
       errors: [true, true, true],
     }
   );

@@ -15,7 +15,7 @@ async function promiseAllAwait() {
 
 async function compareFunctions() {
   const results = await speeder([serialAwait, promiseAllAwait], {
-    names: ["serial async return", "parallel async return"],
+    names: ["Serial async return", "Parallel async return"],
   });
 
   console.log(results);
